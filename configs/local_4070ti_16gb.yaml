@@ -1,0 +1,36 @@
+seed: 42
+device: cuda
+sample_rate: 24000
+
+paths:
+  manifest: data/raw/manifest.jsonl
+  token_manifest: data/tokenized/manifest.tokenized.jsonl
+  checkpoints_dir: checkpoints
+  outputs_dir: outputs
+
+codec:
+  bandwidth: 6.0
+
+model:
+  n_layers: 16
+  n_heads: 16
+  hidden_dim: 1024
+  dropout: 0.1
+  max_positions: 1024
+  speaker_cond: true
+  n_speakers: 128
+
+training:
+  precision: bf16
+  micro_batch_size: 2
+  grad_accum_steps: 8
+  seq_len: 1024
+  lr: 3e-4
+  max_steps: 2000
+  log_every: 10
+  save_every: 200
+
+inference:
+  max_new_tokens: 256
+  temperature: 1.0
+  top_k: 50

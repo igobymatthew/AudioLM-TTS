@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+
+# Runtime artifacts
+data/
+checkpoints/
+outputs/
+mlruns/
+
+# Keep structure placeholders
+!data/.gitkeep
+!checkpoints/.gitkeep
+!outputs/.gitkeep
+!mlruns/.gitkeep
+
+mlflow.db

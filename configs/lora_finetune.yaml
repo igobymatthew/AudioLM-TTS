@@ -1,0 +1,9 @@
+base_config: configs/small_debug.yaml
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: ["c_attn", "c_proj"]
+training:
+  max_steps: 100
+  lr: 1e-4
