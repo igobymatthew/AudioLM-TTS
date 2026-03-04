@@ -1,0 +1,36 @@
+seed: 123
+device: cpu
+sample_rate: 24000
+
+paths:
+  manifest: data/raw/sample/manifest.jsonl
+  token_manifest: data/tokenized/sample_manifest.tokenized.jsonl
+  checkpoints_dir: checkpoints
+  outputs_dir: outputs
+
+codec:
+  bandwidth: 6.0
+
+model:
+  n_layers: 2
+  n_heads: 2
+  hidden_dim: 128
+  dropout: 0.1
+  max_positions: 256
+  speaker_cond: true
+  n_speakers: 16
+
+training:
+  precision: fp32
+  micro_batch_size: 1
+  grad_accum_steps: 1
+  seq_len: 128
+  lr: 5e-4
+  max_steps: 100
+  log_every: 1
+  save_every: 10
+
+inference:
+  max_new_tokens: 64
+  temperature: 1.0
+  top_k: 20
