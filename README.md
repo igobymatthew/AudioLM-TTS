@@ -1,12 +1,3 @@
-Yes. Below is the entire README as one clean Markdown file, with no breaks in formatting.
-You can copy everything between the triple backticks and save it as:
-
-README.md
-
-
-⸻
-
-
 # AudioLM-TTS (Resume-Grade)
 
 Discrete Neural Codec Tokens + Transformer Audio Language Model for Text-to-Speech
