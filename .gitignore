@@ -5,10 +5,10 @@ __pycache__/
 .DS_Store
 
 # Runtime artifacts
-data/
-checkpoints/
-outputs/
-mlruns/
+/data/
+/checkpoints/
+/outputs/
+/mlruns/
 
 # Keep structure placeholders
 !data/.gitkeep

@@ -1,4 +1,5 @@
 import argparse
+from pathlib import Path
 
 import numpy as np
 import soundfile as sf
@@ -33,6 +34,7 @@ def decode_tokens(token_path: str, out_wav: str, bandwidth: float = 6.0, device:
     except Exception:
         wav_np = _fallback_decode(codes)
 
+    Path(out_wav).parent.mkdir(parents=True, exist_ok=True)
     sf.write(out_wav, np.asarray(wav_np), 24000)
 
 
